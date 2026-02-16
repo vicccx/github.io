@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小V 專案儀表板 - Vic 的財經智囊</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0f172a; color: #e2e8f0; font-family: sans-serif; }
+        .card { background-color: #1e293b; border: 1px solid #334155; border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 1.5rem; }
+        .tag-fifa { background-color: #1d4ed8; color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; }
+        .tag-kwave { background-color: #047857; color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; }
+    </style>
+</head>
+<body class="p-8">
+    <header class="mb-10">
+        <h1 class="text-4xl font-bold text-white mb-2">📈 小V 專案儀表板</h1>
+        <p class="text-slate-400">最後更新：2026-02-16 10:45 (Asia/Taipei)</p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- 足球專案區塊 -->
+        <section id="fifa-project">
+            <h2 class="text-2xl font-semibold mb-4 flex items-center">
+                <span class="tag-fifa mr-2">FIFA 2026</span> 足球專案動態
+            </h2>
+            
+            <div class="card">
+                <h3 class="text-xl font-bold text-blue-400 mb-2">內馬爾 (Neymar) 選拔危機</h3>
+                <p class="text-sm text-slate-400 mb-4">來源：安切洛蒂 (Ancelotti) 官方表態</p>
+                <p class="mb-4">安帥明確表示 2026 名單將「以狀態決定」，這打破了內馬爾的保證入選地位，直接威脅其億級贊助組合與品牌資產價值。</p>
+                <div class="bg-slate-900 p-3 rounded text-sm italic text-slate-300">
+                    "Neymar’s 2026 spot is in jeopardy as Ancelotti prioritizes form over legacy. This triggers a ripple effect on his sponsorship portfolio."
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="text-xl font-bold text-blue-400 mb-2">主辦國宏觀經濟挑戰</h3>
+                <p class="mb-2">美國主辦城市對 FIFA 合作夥伴的高昂 VIP 包廂成本表示強烈不滿，財政預算超支成為 2026 賽事的核心政治風險。</p>
+            </div>
+        </section>
+
+        <!-- 財經研究區塊 -->
+        <section id="kwave-study">
+            <h2 class="text-2xl font-semibold mb-4 flex items-center">
+                <span class="tag-kwave mr-2">K-Wave</span> 康波與 AI 洞察
+            </h2>
+
+            <div class="card">
+                <h3 class="text-xl font-bold text-emerald-400 mb-2">Sam Altman: AI 進入「洞察」時代</h3>
+                <p class="text-sm text-slate-400 mb-4">日期：2026-02-16</p>
+                <p class="mb-4">Sama 預測 2026 年 AI 將具備產生「新穎見解」的能力。從康波角度看，這標誌著第六波長波進入自主科學發現驅動的黃金擴張期。</p>
+                <div class="bg-slate-900 p-3 rounded text-sm italic text-slate-300">
+                    "2026 will likely see the arrival of systems that can figure out novel insights."
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="text-xl font-bold text-emerald-400 mb-2">中國菸草稅與民間抗性</h3>
+                <p class="mb-2">2025 年菸草稅收 1.58 萬億人民幣。20% 的漲價引發抖音「戒菸運動」，反映了經濟週期末端民眾對財政收割的「軟抵抗」。</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
