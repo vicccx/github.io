@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>小V 📈 終極專案情報儀表板 v7.2</title>
+    <title>小V 📈 終極專案情報儀表板 v7.5</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
@@ -15,7 +15,7 @@
         .tweet-box { background: #000; border: 1px solid #334155; border-radius: 0.75rem; padding: 1rem; margin-top: 0.8rem; border-left: 4px solid #38bdf8; font-family: 'Inter', sans-serif; }
         .badge { font-size: 0.6rem; font-weight: 900; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; }
         .update-pulse { display: inline-block; width: 8px; height: 8px; background-color: #10b981; border-radius: 50%; box-shadow: 0 0 10px #10b981; animation: pulse 2s infinite; }
-        @keyframes pulse { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(1.2); } }
+        @keyframes pulse { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(1.2); } 100% { opacity: 1; transform: scale(1); } }
         .hidden { display: none; }
     </style>
 </head>
@@ -27,10 +27,10 @@
             <h1 class="text-4xl font-black text-white italic tracking-tighter flex items-center gap-3">
                 <span class="update-pulse"></span> Intelligenz <span class="text-blue-500">Hub</span>
             </h1>
-            <p class="text-slate-500 text-xs font-mono tracking-widest mt-2 uppercase">Little V Intelligence System · v7.2 (Tweets Restored)</p>
+            <p class="text-slate-500 text-xs font-mono tracking-widest mt-2 uppercase">Little V Intelligence System · v7.5 (Evening Pulse Update)</p>
         </div>
         <div class="text-right font-mono text-xs text-slate-400">
-            LAST UPDATE: <span class="text-emerald-400 font-bold">2026-02-16 14:30</span>
+            LAST UPDATE: <span class="text-emerald-400 font-bold">2026-02-16 18:15</span>
         </div>
     </header>
 
@@ -48,59 +48,49 @@
 
         <!-- TAB: OVERVIEW -->
         <div id="tab-overview" class="tab-content">
-            <!-- DEEP DIVE OPTIONS (TOP PINNED) -->
+            
+            <!-- 2/16 EVENING REPORT (NEWEST) -->
+            <div class="card border-l-4 border-red-500 bg-red-900/10">
+                <div class="flex justify-between mb-2"><span class="badge bg-red-500 text-white">LATEST 18:00</span></div>
+                <h3 class="text-lg font-bold text-white mb-2">傍晚快訊：二級市場泡沫與財政隱憂</h3>
+                <ul class="list-disc list-inside text-sm text-slate-400 space-y-2">
+                    <li><b>票務泡沫：</b>二級市場手續費推升成交價，決賽掛牌均價破 <b>$11,500</b>，最貴方案達 <b>$73,200</b>。</li>
+                    <li><b>物流通膨：</b>主辦城市夏季飯店均價漲幅 <b>14.75%</b>，呈現「賽事當天尖峰」定價。</li>
+                    <li><b>財政隱憂：</b>地方政府因營運成本與 FIFA 進行分歧協商，歷史數據顯示城市常面臨虧損。</li>
+                </ul>
+            </div>
+
+            <!-- 2/16 LUNCH REPORT -->
+            <div class="card border-l-4 border-orange-500 opacity-90">
+                <div class="flex justify-between mb-2"><span class="badge bg-orange-500 text-white">LUNCH 14:00</span></div>
+                <h3 class="text-lg font-bold text-white mb-2">午間版：天價停車位與文化衝突</h3>
+                <ul class="list-disc list-inside text-sm text-slate-400 space-y-2">
+                    <li><b>停車費飆升：</b>SoFi 球場停車預購價達 $250-$300。</li>
+                    <li><b>埃及抗議：</b>埃及足協拒絕包容性標誌，埋下文化衝突伏筆。</li>
+                    <li><b>技術調整：</b>確認執行「22 分鐘強制飲水規則」。</li>
+                </ul>
+            </div>
+
+            <!-- DEEP DIVE OPTIONS (PINNED) -->
             <div class="card border-l-4 border-yellow-500 bg-yellow-900/10">
-                <h3 class="text-yellow-500 font-bold mb-4 flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    核心分析視角 (Deep Dive Options)
-                </h3>
-                <div class="space-y-4 text-sm text-slate-300">
-                    <div class="p-3 bg-slate-900/50 rounded border border-slate-700">
-                        <strong class="text-white block mb-1">選項 1：主辦城市財政壓力</strong>
-                        Deep dive into market trends & host fiscal metrics. （深度解析市場趨勢與主辦國財政指標。）
-                    </div>
-                    <div class="p-3 bg-slate-900/50 rounded border border-slate-700">
-                        <strong class="text-white block mb-1">選項 2：商業營收結構</strong>
-                        Deep dive into market trends & commercial unit economics. （深度解析市場趨勢與商業單元經濟模型。）
-                    </div>
-                    <div class="p-3 bg-slate-900/50 rounded border border-yellow-500/30">
-                        <strong class="text-yellow-400 block mb-1">選項 3：宏觀視野 (Recommended)</strong>
-                        Deep dive into market trends & hosting macroeconomics. （深度解析市場趨勢與賽事主辦宏觀經濟。）
-                    </div>
+                <h3 class="text-yellow-500 font-bold mb-4 flex items-center gap-2">核心分析視角 (Deep Dive Options)</h3>
+                <div class="space-y-4 text-sm text-slate-300 font-mono text-xs">
+                    <b>2/15-16 選項清單：</b><br>
+                    1. 主辦城市財政壓力 (Host fiscal metrics)<br>
+                    2. 商業營收結構 (Commercial unit economics)<br>
+                    3. 宏觀視野 (Hosting macroeconomics) - <i>Recommended</i>
                 </div>
             </div>
 
-            <!-- 2/16 LATEST -->
+            <!-- 2/16 AM RECAP -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div class="card border-t-4 border-blue-500">
-                    <div class="flex justify-between mb-2"><span class="badge bg-blue-500 text-white">TODAY 12:00</span></div>
-                    <h3 class="text-lg font-bold text-white mb-2">FIFA 最新裁決與賽事更新</h3>
-                    <ul class="list-disc list-inside text-sm text-slate-400 space-y-2">
-                        <li><b>資格爭議：</b>FIFA 今日裁決尼日利亞對剛果球員資格抗議，恐影響附加賽席位。</li>
-                        <li><b>美國隊分組：</b>USMNT 小組賽對手確認為澳洲、巴拉圭等。</li>
-                        <li><b>商業贊助：</b>Motorola 推出 Razr FIFA 特別版；QIB Visa 抽獎活動開跑。</li>
-                    </ul>
+                <div class="card border-t-4 border-purple-500">
+                    <h3 class="text-lg font-bold text-white mb-2 underline decoration-purple-500">英國社群媒體禁令</h3>
+                    <p class="text-sm text-slate-400">上議院修正案通過，監管進入「產品生存權」時代。Meta/TikTok 流量面臨挑戰。</p>
                 </div>
-
                 <div class="card border-t-4 border-red-500">
-                    <div class="flex justify-between mb-2"><span class="badge bg-red-500 text-white">TODAY 10:45</span></div>
-                    <h3 class="text-lg font-bold text-white mb-2">內馬爾品牌資產危機</h3>
-                    <p class="text-sm text-slate-400">安切洛蒂：「我不欠任何人情。」名單純績效導向，引發 Neymar 贊助商 Key-man risk 擔憂。</p>
-                </div>
-            </div>
-
-            <!-- 2/15 HISTORY -->
-            <div class="card opacity-75">
-                <h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4 border-b border-slate-700 pb-2">History Log: 2026-02-15</h3>
-                <div class="grid grid-cols-2 gap-4 text-sm">
-                    <div>
-                        <span class="text-blue-400 font-bold block">二級市場泡沫</span>
-                        <p class="text-slate-400">高階席位飆至 $11,000，投機情緒高漲。</p>
-                    </div>
-                    <div>
-                        <span class="text-emerald-400 font-bold">美國經濟氣墊</span>
-                        <p class="text-slate-400">預估 $540 億外匯流入，抵銷宏觀逆風。</p>
-                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 underline decoration-red-500">內馬爾品牌資產危機</h3>
+                    <p class="text-sm text-slate-400">安帥「不欠人情」表態，Neymar 贊助組合面臨去泡沫化風險。</p>
                 </div>
             </div>
         </div>
@@ -108,43 +98,48 @@
         <!-- TAB: TWEETS -->
         <div id="tab-tweets" class="tab-content hidden">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- 2/16 TWEETS -->
+                <!-- NEW TWEETS -->
                 <div class="space-y-6">
-                    <h3 class="text-blue-400 font-black text-xs uppercase mb-4">Today's Drafts (Feb 16)</h3>
+                    <h3 class="text-blue-400 font-black text-xs uppercase mb-4">Evening Intelligence (Feb 16)</h3>
                     
-                    <div class="tweet-box">
-                        <span class="text-[10px] text-slate-500 block mb-1">12:00 PM | FIFA NEWS</span>
-                        <p class="text-sm text-slate-200">🔥 FIFA rules TODAY on Nigeria vs DR Congo eligibility protest! 2026 playoffs in jeopardy? Plus: USMNT draws Australia & Paraguay. 🇺🇸⚽️ #FIFA2026 #WorldCup</p>
+                    <div class="tweet-box border-red-500">
+                        <span class="text-[10px] text-red-400 block mb-1">MARKET BUBBLE / TICKETS</span>
+                        <p class="text-sm text-slate-200">2026世足票務泡沫！決賽二級市場均價破 $11,500，最貴席位 $73k。當 15% 雙向手續費推升成本，這已成資本遊戲。📈💸 #FIFA2026 #Economy</p>
                     </div>
 
-                    <div class="tweet-box">
-                        <span class="text-[10px] text-slate-500 block mb-1">10:45 AM | NEYMAR CRISIS</span>
-                        <p class="text-sm text-slate-200">Ancelotti on Neymar's 2026 WC spot: "I don't have debts to anyone." Meritocracy threatens his $100M sponsorship empire. Brand equity is now performance-contingent. 📉🇧🇷 #FIFA2026 #Neymar</p>
+                    <div class="tweet-box border-orange-400">
+                        <span class="text-[10px] text-orange-400 block mb-1">IRAN / MILITARY KEYNESIANISM</span>
+                        <p class="text-sm text-slate-200">Polymarket：2026年底衝突率61%。1/3海軍部署是能源定價權「極限施壓」。這是軍事凱因斯主義的最佳實踐。📈⚓️ #Geopolitics #Iran</p>
                     </div>
 
-                    <div class="tweet-box border-emerald-500">
-                        <span class="text-[10px] text-emerald-500 block mb-1">11:20 AM | K-WAVE AI</span>
-                        <p class="text-sm text-slate-200">The 6th Kondratiev Cycle is shifting from deployment to discovery. Novel AI insights will collapse R&D costs, moving the global economy to autonomous scientific expansion. 2026 is the year. 📈 #AI #KWave</p>
+                    <div class="tweet-box border-red-600">
+                        <span class="text-[10px] text-red-400 block mb-1">EYE-CATCHING / WEALTH FILTER</span>
+                        <p class="text-sm text-slate-200">SoFi球場停車費飆至$300。當停車位比門票還貴，你不是球迷，而是FIFA的「流動性提供者」。這不是世足熱潮，而是「財富過濾器」。📉🚫 #FIFA2026 #Inflation</p>
+                    </div>
+
+                    <div class="tweet-box border-blue-600">
+                        <span class="text-[10px] text-blue-400 block mb-1">EYE-CATCHING / ANALYST DEATH</span>
+                        <p class="text-sm text-slate-200">Sama的「新穎見解」AI預示分析師的終結。2026標誌智力勞動結構性通縮。不掌握康波第六波，你將成為被淘汰的「舊帳面成本」。🧠💀 #AI #Sama #KWave</p>
+                    </div>
+
+                    <div class="tweet-box border-emerald-600">
+                        <span class="text-[10px] text-emerald-400 block mb-1">EYE-CATCHING / ARMED EXPANSION</span>
+                        <p class="text-sm text-slate-200">高市早苗打破日本二戰後禁忌。東亞「軍事凱因斯主義」正式降臨。和平紅利耗盡，康波第六波擴張將武裝到牙齒。📈🛡️ #Japan #Geopolitics</p>
+                    </div>
+
+                    <div class="tweet-box border-purple-500">
+                        <p class="text-sm text-slate-200">英國 16 歲以下社群禁令是真的！🇬🇧 上議院已通過修正案。這不僅是健康政策，更是對「注意力經濟」的重擊。📉🚫 #UK #SocialMediaBan</p>
                     </div>
                 </div>
 
-                <!-- 2/15 ARCHIVE (RESTORED) -->
-                <div class="space-y-6 opacity-80">
+                <!-- ARCHIVE -->
+                <div class="space-y-6 opacity-60">
                     <h3 class="text-slate-500 font-black text-xs uppercase mb-4">Archive (Feb 15)</h3>
-                    
-                    <div class="tweet-box border-slate-700">
-                        <span class="text-[10px] text-slate-500 block mb-1">US ECONOMY CUSHION (23:45)</span>
-                        <p class="text-sm text-slate-400 italic">"FIFA 2026 is the 'safety cushion' for the US economy! $54B foreign inflows create a vital firewall against macro headwinds. 🇺🇸📈 #FIFA2026"</p>
+                    <div class="tweet-box border-slate-700 font-mono text-[11px]">
+                        "FIFA 2026 is the 'safety cushion' for the US economy! $54B inflows."
                     </div>
-
-                    <div class="tweet-box border-slate-700">
-                        <span class="text-[10px] text-slate-500 block mb-1">CR7 REPLY DRAFT (22:00)</span>
-                        <p class="text-sm text-slate-400 italic">"Watching CR7's peak form ahead of FIFA 2026 is the ultimate warning to the world! We are ready to witness history rewritten. Vamos Capitão! 🐐🔥 #CR7"</p>
-                    </div>
-
-                    <div class="tweet-box border-slate-700">
-                        <span class="text-[10px] text-slate-500 block mb-1">ARGENTINA UPDATE (20:00)</span>
-                        <p class="text-sm text-slate-400 italic">"Argentina locked in for 2026. Defending champs showing unmatched dominance. Waiting for Messi's return on Feb 26! 🇦🇷🏆 #Messi"</p>
+                    <div class="tweet-box border-slate-700 font-mono text-[11px]">
+                        "Argentina locked in for 2026. #Messi return Feb 26!"
                     </div>
                 </div>
             </div>
@@ -153,28 +148,12 @@
         <!-- TAB: STARS -->
         <div id="tab-stars" class="tab-content hidden">
             <div class="card">
-                <h2 class="text-xl font-bold mb-4 text-white">球星即時狀態 (12:00 Update)</h2>
+                <h2 class="text-xl font-bold mb-4 text-white">球星矩陣 / 18:00 Scanning</h2>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="bg-slate-900 p-4 rounded border border-slate-800 text-center">
-                        <div class="font-bold text-white">C. Ronaldo</div>
-                        <div class="text-xs text-slate-500">@Cristiano</div>
-                        <div class="mt-2 text-[10px] bg-emerald-900 text-emerald-400 py-1 px-2 rounded">Active</div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded border border-slate-800 text-center">
-                        <div class="font-bold text-white">L. Messi</div>
-                        <div class="text-xs text-slate-500">@TeamMessi</div>
-                        <div class="mt-2 text-[10px] bg-slate-800 text-slate-400 py-1 px-2 rounded">Monitoring</div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded border border-slate-800 text-center border-red-500/30">
-                        <div class="font-bold text-red-400">Neymar Jr.</div>
-                        <div class="text-xs text-slate-500">@neymarjr</div>
-                        <div class="mt-2 text-[10px] bg-red-900 text-red-400 py-1 px-2 rounded font-bold">CRISIS MODE</div>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded border border-slate-800 text-center">
-                        <div class="font-bold text-white">Lamine Yamal</div>
-                        <div class="text-xs text-slate-500">@LamineeYamal</div>
-                        <div class="mt-2 text-[10px] bg-emerald-900 text-emerald-400 py-1 px-2 rounded">Rising</div>
-                    </div>
+                    <div class="bg-slate-900 p-4 rounded border border-slate-800 text-center"><div class="font-bold">Cristiano</div><div class="text-[10px] text-slate-500">STABLE</div></div>
+                    <div class="bg-slate-900 p-4 rounded border border-slate-800 text-center border-red-500/30"><div class="font-bold text-red-400">Neymar</div><div class="text-[10px] bg-red-900/20 text-red-400 px-2 rounded mt-1 font-bold">CRISIS</div></div>
+                    <div class="bg-slate-900 p-4 rounded border border-slate-800 text-center"><div class="font-bold text-emerald-400">Lamine Yamal</div><div class="text-[10px] text-slate-500">RISING</div></div>
+                    <div class="bg-slate-900 p-4 rounded border border-slate-800 text-center"><div class="font-bold text-blue-400">Lionel Messi</div><div class="text-[10px] text-slate-500">RECOVERY</div></div>
                 </div>
             </div>
         </div>
@@ -182,8 +161,8 @@
         <!-- TAB: KWAVE -->
         <div id="tab-kwave" class="tab-content hidden">
             <div class="card border-l-4 border-emerald-500">
-                <h2 class="text-xl font-bold mb-2">2026 AI Novel Insights Era</h2>
-                <p class="text-sm text-slate-400">Sam Altman 預測 AI 進入自主發現階段。康波第六波特徵：R&D 成本崩潰、科學發現自動化。</p>
+                <h2 class="text-xl font-bold mb-2 italic">Creative Destruction in Progress</h2>
+                <p class="text-sm text-slate-400">日本高市早苗開啟「軍事財政」新週期。資本正從民用消費轉向軍工技術鏈。台日安保鏈重塑全球半導體估值。</p>
             </div>
         </div>
 
@@ -194,7 +173,8 @@
             document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
             document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
             document.getElementById('tab-' + tabId).classList.remove('hidden');
-            event.currentTarget.classList.add('active');
+            const target = Array.from(document.querySelectorAll('.tab-btn')).find(btn => btn.innerText.includes(tabId === 'overview' ? '總覽' : tabId === 'tweets' ? '推文' : tabId === 'stars' ? '球星' : '康波'));
+            if(target) target.classList.add('active');
         }
     </script>
 </body>
