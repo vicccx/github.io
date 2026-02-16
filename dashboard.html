@@ -10,58 +10,70 @@
         .card { background-color: #1e293b; border: 1px solid #334155; border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 1.5rem; }
         .tag-fifa { background-color: #1d4ed8; color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; }
         .tag-kwave { background-color: #047857; color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; }
+        .data-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1rem; }
+        .data-item { background: #0f172a; padding: 0.75rem; border-radius: 0.5rem; text-align: center; }
     </style>
 </head>
 <body class="p-8">
-    <header class="mb-10">
+    <header class="mb-10 text-center">
         <h1 class="text-4xl font-bold text-white mb-2">📈 小V 專案儀表板</h1>
-        <p class="text-slate-400">最後更新：2026-02-16 11:25 (Asia/Taipei)</p>
+        <p class="text-slate-400">當前時間：2026-02-16 11:45 | 系統狀態：<span class="text-emerald-400">運作中</span></p>
     </header>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <!-- 足球專案區塊 -->
         <section id="fifa-project">
-            <h2 class="text-2xl font-semibold mb-4 flex items-center">
-                <span class="tag-fifa mr-2">FIFA 2026</span> 足球專案動態
+            <h2 class="text-2xl font-semibold mb-4 flex items-center border-b border-slate-700 pb-2">
+                <span class="tag-fifa mr-2">FIFA 2026</span> 全球賽事經濟與監控
             </h2>
             
-            <div class="card">
-                <div class="text-xs text-blue-400 mb-1 font-mono">NEW | 2026-02-16 11:20</div>
-                <h3 class="text-xl font-bold text-blue-400 mb-2">內馬爾 (Neymar) 選拔危機 - 深度財務影響</h3>
-                <p class="mb-4">安帥明確表示 2026 名單將「以狀態決定」。這不僅是競技風險，更引發其 **Performance-contingent brand equity**（績效掛鉤品牌資產）的去泡沫化，對其價值數億的贊助組合產生連鎖衝擊。</p>
-                <div class="bg-slate-900 p-3 rounded text-sm italic text-slate-300">
-                    "Neymar’s 2026 spot is in jeopardy as Ancelotti prioritizes form over legacy. This meritocratic shift triggers a ripple effect on his sponsorship portfolio."
+            <!-- 最新動態 -->
+            <div class="card border-l-4 border-blue-500">
+                <div class="text-xs text-blue-400 mb-1 font-mono">NEW | 2026-02-16 10:45</div>
+                <h3 class="text-xl font-bold text-blue-400 mb-2">安切洛蒂震盪：內馬爾品牌資產脫鉤風險</h3>
+                <p class="mb-4 text-slate-300">巴西主帥明確表示「不欠人情」，2026 名單將純粹績效導向。這引發了內馬爾 **Performance-contingent brand equity** 的重估，贊助商面臨 Key-man risk。</p>
+                <div class="bg-slate-900 p-3 rounded text-sm italic text-slate-400 border border-slate-700">
+                    "Neymar’s 2026 spot is in jeopardy... triggering a de-leveraging of his personal brand assets."
                 </div>
             </div>
 
+            <!-- 昨天晚上/歷史動態 (2026-02-15) -->
             <div class="card">
-                <div class="text-xs text-slate-500 mb-1 font-mono">HISTORY | 2026-02-16 10:45</div>
-                <h3 class="text-xl font-bold text-blue-400 mb-2">主辦國宏觀經濟挑戰</h3>
-                <p class="mb-2">美國主辦城市對 FIFA 合作夥伴的高昂 VIP 包廂成本表示強烈不滿，財政預算超支成為 2026 賽事的核心政治風險。</p>
+                <div class="text-xs text-slate-500 mb-1 font-mono">HISTORY | 2026-02-15 16:00</div>
+                <h3 class="text-xl font-bold text-slate-300 mb-2">二級市場價格泡沫與物流預警</h3>
+                <p class="text-sm mb-4">第二階段通知發放後，未中籤球迷湧入二級市場。部分高階席位突破 **$11,000 USD**。同時紐約/費城/波士頓機票預估漲幅達 **50-100%**。</p>
+                <div class="data-grid text-xs">
+                    <div class="data-item"><span class="block text-slate-500">申請總數</span><span class="font-bold text-blue-400 text-lg">5 億+</span></div>
+                    <div class="data-item"><span class="block text-slate-500">二級市場均價</span><span class="font-bold text-orange-400 text-lg">~$11k</span></div>
+                    <div class="data-item"><span class="block text-slate-500">估計總產值</span><span class="font-bold text-emerald-400 text-lg">$110 億</span></div>
+                    <div class="data-item"><span class="block text-slate-500">主辦城市紅利</span><span class="font-bold text-blue-400 text-lg">$15 億+</span></div>
+                </div>
             </div>
         </section>
 
         <!-- 財經研究區塊 -->
         <section id="kwave-study">
-            <h2 class="text-2xl font-semibold mb-4 flex items-center">
-                <span class="tag-kwave mr-2">K-Wave</span> 康波與 AI 洞察
+            <h2 class="text-2xl font-semibold mb-4 flex items-center border-b border-slate-700 pb-2">
+                <span class="tag-kwave mr-2">K-Wave</span> 康德拉季耶夫週期研究
             </h2>
 
-            <div class="card">
+            <!-- 最新動態 -->
+            <div class="card border-l-4 border-emerald-500">
                 <div class="text-xs text-emerald-400 mb-1 font-mono">NEW | 2026-02-16 11:20</div>
-                <h3 class="text-xl font-bold text-emerald-400 mb-2">Kondratiev Cycle: 從部署向發現轉型</h3>
-                <p class="mb-4">Sam Altman 預測 2026 年 AI 具備產生「新穎見解」能力。這標誌著第六波康波正式進入 **Autonomous Scientific Expansion**（自主科學擴張）階段，研發成本將面臨結構性崩潰。</p>
-                <div class="bg-slate-900 p-3 rounded text-sm italic text-slate-300">
-                    "The 6th Kondratiev Cycle is shifting from deployment to discovery. Novel AI insights will collapse R&D costs."
+                <h3 class="text-xl font-bold text-emerald-400 mb-2">AI 典範轉移：從代理人到自主洞察</h3>
+                <p class="mb-4">Sam Altman 預言 2026 年系統將能自主發現「新穎見解」。這標誌著第六波康波進入 **Autonomous Scientific Expansion** 階段，預計會引發 R&D 成本的結構性崩潰與智力資產重新定價。</p>
+                <div class="bg-slate-900 p-3 rounded text-sm italic text-slate-400 border border-slate-700 font-mono">
+                    "2026: The year the new paradigm outruns the old."
                 </div>
             </div>
 
+            <!-- 歷史動態 -->
             <div class="card">
-                <div class="text-xs text-slate-500 mb-1 font-mono">HISTORY | 2026-02-16 10:45</div>
-                <h3 class="text-xl font-bold text-emerald-400 mb-2">中國菸草稅與民間抗性</h3>
-                <p class="mb-2">2025 年菸草稅收 1.58 萬億人民幣。20% 的漲價引發抖音「戒菸運動」，反映了經濟週期末端民眾對財政收割的「軟抵抗」。</p>
+                <div class="text-xs text-slate-500 mb-1 font-mono">HISTORY | 2026-02-16 10:00</div>
+                <h3 class="text-xl font-bold text-slate-300 mb-2">中國菸草財政與民間經濟抗性</h3>
+                <p class="text-sm">2025 年菸草上繳財政達 **1.58 萬億元**。低價菸絕跡與 20% 的漲價引發抖音「軟抵抗」。反映經濟下行期政府對存量市場的極限收割與民間對沖行為。</p>
             </div>
-        </section>
+        </div>
     </div>
 </body>
 </html>
